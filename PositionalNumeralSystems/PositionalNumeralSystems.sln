@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PositionalNumeralSystems", "PositionalNumeralSystems\PositionalNumeralSystems.csproj", "{6CB8500A-48F5-4BEA-9636-9D8F86AD72CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Utils\Utils.csproj", "{BBF10556-0852-4CBD-9171-13BBCB1E1746}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6CB8500A-48F5-4BEA-9636-9D8F86AD72CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CB8500A-48F5-4BEA-9636-9D8F86AD72CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CB8500A-48F5-4BEA-9636-9D8F86AD72CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBF10556-0852-4CBD-9171-13BBCB1E1746}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBF10556-0852-4CBD-9171-13BBCB1E1746}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBF10556-0852-4CBD-9171-13BBCB1E1746}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBF10556-0852-4CBD-9171-13BBCB1E1746}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

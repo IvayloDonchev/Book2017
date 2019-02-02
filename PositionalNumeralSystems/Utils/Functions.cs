@@ -17,7 +17,7 @@ namespace Utils
         }
         public static string FromDec(int n, int r)  // От десетична в r-ична
         {
-            string sign = n > 0 ? "" : "-";
+            string sign = n >= 0 ? "" : "-";
             string s = "";
             int d;
             n = Math.Abs(n);

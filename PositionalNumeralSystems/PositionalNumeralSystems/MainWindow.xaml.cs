@@ -28,8 +28,18 @@ namespace PositionalNumeralSystems
 
         private void FromDecButton_Click(object sender, RoutedEventArgs e)
         {
-            HexBox.Text = Functions.FromDec(int.Parse(DecBox.Text), 16);
-            BinBox.Text = Functions.FromDec(int.Parse(DecBox.Text), 2);
+            try
+            {
+                HexBox.Text = Functions.FromDec(int.Parse(DecBox.Text), 16);
+                BinBox.Text = Functions.FromDec(int.Parse(DecBox.Text), 2);
+            }
+            catch(FormatException)
+            {
+                MessageBox.Show("Некоректен формат на данните");
+                HexBox.Text = "0";
+                BinBox.Text = "0";
+                DecBox.Text = "0";
+            }
         }
 
         private void FromBinButton_Click(object sender, RoutedEventArgs e)

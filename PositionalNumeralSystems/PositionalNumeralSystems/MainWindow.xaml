@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PositionalNumeralSystems"
         mc:Ignorable="d"
-        Title="Позиционни бройни системи" Height="265" Width="507">
+        Title="Позиционни бройни системи" Height="275" Width="507">
     <Grid>
         <Label Content="Десетична:" HorizontalAlignment="Left" Margin="67,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.408,0.346"/>
         <Label Content="Двоична:&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="3.605,3.808" Height="29" Margin="77,68,0,0"/>

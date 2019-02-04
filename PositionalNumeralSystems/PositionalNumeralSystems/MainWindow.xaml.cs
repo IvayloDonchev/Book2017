@@ -12,7 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Utils;
+using static Utils.Functions;   //за директен достъп до функциите на статичния клас Functions
+
 namespace PositionalNumeralSystems
 {
     
@@ -30,9 +31,9 @@ namespace PositionalNumeralSystems
         {
             try
             {
-                HexBox.Text = Functions.FromDec(int.Parse(DecBox.Text), 16);
-                BinBox.Text = Functions.FromDec(int.Parse(DecBox.Text), 2);
-                CustomBox.Text = Functions.FromDec(int.Parse(DecBox.Text), int.Parse(BaseBox.Text));
+                HexBox.Text = FromDec(int.Parse(DecBox.Text), 16);
+                BinBox.Text = FromDec(int.Parse(DecBox.Text), 2);
+                CustomBox.Text = FromDec(int.Parse(DecBox.Text), int.Parse(BaseBox.Text));
             }
             catch(FormatException)
             {
@@ -46,23 +47,23 @@ namespace PositionalNumeralSystems
 
         private void FromBinButton_Click(object sender, RoutedEventArgs e)
         {
-            DecBox.Text = Functions.ToDec(BinBox.Text,2).ToString();
-            HexBox.Text = Functions.FromDec(int.Parse(DecBox.Text), 16);
-            CustomBox.Text = Functions.FromDec(int.Parse(DecBox.Text), int.Parse(BaseBox.Text));
+            DecBox.Text = ToDec(BinBox.Text,2).ToString();
+            HexBox.Text = FromDec(int.Parse(DecBox.Text), 16);
+            CustomBox.Text = FromDec(int.Parse(DecBox.Text), int.Parse(BaseBox.Text));
         }
 
         private void FromHexButton_Click(object sender, RoutedEventArgs e)
         {
-            DecBox.Text = Functions.ToDec(HexBox.Text, 16).ToString();
-            BinBox.Text = Functions.FromDec(int.Parse(DecBox.Text), 2);
-            CustomBox.Text = Functions.FromDec(int.Parse(DecBox.Text), int.Parse(BaseBox.Text));
+            DecBox.Text = ToDec(HexBox.Text, 16).ToString();
+            BinBox.Text = FromDec(int.Parse(DecBox.Text), 2);
+            CustomBox.Text = FromDec(int.Parse(DecBox.Text), int.Parse(BaseBox.Text));
         }
 
         private void FromCustomBaseButton_Click(object sender, RoutedEventArgs e)
         {
-            DecBox.Text = Functions.ToDec(CustomBox.Text, int.Parse(BaseBox.Text)).ToString();
-            BinBox.Text = Functions.FromDec(int.Parse(DecBox.Text), 2);
-            HexBox.Text = Functions.FromDec(int.Parse(DecBox.Text), 16);
+            DecBox.Text = ToDec(CustomBox.Text, int.Parse(BaseBox.Text)).ToString();
+            BinBox.Text = FromDec(int.Parse(DecBox.Text), 2);
+            HexBox.Text = FromDec(int.Parse(DecBox.Text), 16);
         }
 
         private void ExitButton_Click(object sender, RoutedEventArgs e)

@@ -28,6 +28,11 @@ namespace Ch03Ex01
 placed in two lines";
             Console.WriteLine(myString);
 
+
+            int var1, var2 = 5, var3 = 6;
+            var1 = var2++ * --var3;
+            Console.WriteLine(var1);
+
             Console.ReadKey();
         }
     }

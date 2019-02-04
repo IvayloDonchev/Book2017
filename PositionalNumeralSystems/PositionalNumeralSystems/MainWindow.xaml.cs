@@ -32,6 +32,7 @@ namespace PositionalNumeralSystems
             try
             {
                 HexBox.Text = FromDec(int.Parse(DecBox.Text), 16);
+                //HexBox.Text = Convert.ToString(int.Parse(DecBox.Text), 16);
                 BinBox.Text = FromDec(int.Parse(DecBox.Text), 2);
                 CustomBox.Text = FromDec(int.Parse(DecBox.Text), int.Parse(BaseBox.Text));
             }

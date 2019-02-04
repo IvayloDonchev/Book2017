@@ -32,6 +32,7 @@ namespace PositionalNumeralSystems
             {
                 HexBox.Text = Functions.FromDec(int.Parse(DecBox.Text), 16);
                 BinBox.Text = Functions.FromDec(int.Parse(DecBox.Text), 2);
+                CustomBox.Text = Functions.FromDec(int.Parse(DecBox.Text), int.Parse(BaseBox.Text));
             }
             catch(FormatException)
             {
@@ -39,6 +40,7 @@ namespace PositionalNumeralSystems
                 HexBox.Text = "0";
                 BinBox.Text = "0";
                 DecBox.Text = "0";
+                CustomBox.Text = "0";
             }
         }
 
@@ -46,12 +48,21 @@ namespace PositionalNumeralSystems
         {
             DecBox.Text = Functions.ToDec(BinBox.Text,2).ToString();
             HexBox.Text = Functions.FromDec(int.Parse(DecBox.Text), 16);
+            CustomBox.Text = Functions.FromDec(int.Parse(DecBox.Text), int.Parse(BaseBox.Text));
         }
 
         private void FromHexButton_Click(object sender, RoutedEventArgs e)
         {
             DecBox.Text = Functions.ToDec(HexBox.Text, 16).ToString();
             BinBox.Text = Functions.FromDec(int.Parse(DecBox.Text), 2);
+            CustomBox.Text = Functions.FromDec(int.Parse(DecBox.Text), int.Parse(BaseBox.Text));
+        }
+
+        private void FromCustomBaseButton_Click(object sender, RoutedEventArgs e)
+        {
+            DecBox.Text = Functions.ToDec(CustomBox.Text, int.Parse(BaseBox.Text)).ToString();
+            BinBox.Text = Functions.FromDec(int.Parse(DecBox.Text), 2);
+            HexBox.Text = Functions.FromDec(int.Parse(DecBox.Text), 16);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

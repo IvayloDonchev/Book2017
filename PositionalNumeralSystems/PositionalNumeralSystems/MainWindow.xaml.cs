@@ -65,7 +65,7 @@ namespace PositionalNumeralSystems
             HexBox.Text = Functions.FromDec(int.Parse(DecBox.Text), 16);
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             Close();
         }

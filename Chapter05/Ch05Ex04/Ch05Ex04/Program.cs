@@ -55,6 +55,27 @@ namespace Ch05Ex04
                 }
             }
             WriteLine($"{total} total integers, {counter} integers with a value other than 0 or null have a sum value of {sum}");
+
+
+            int[,] mas = new int[3, 4] { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 } };
+            for(int i=0; i<3; ++i)
+            {
+                for (int j = 0; j < 4; ++j)
+                    Write($"{mas[i, j]}\t");
+                WriteLine();
+            }
+            foreach(var x in mas)
+                Console.Write($"{x}, ");
+            Console.WriteLine(); Console.WriteLine();
+
+            int[][] jaggedArray = { new int[] { 1, 2, 3 }, new int[] { 4, 5 }, new int[] { 6, 7, 8, 9, 10, 11, 12 } };
+            foreach(int[] row in jaggedArray)
+            {
+                foreach(int x in row)
+                    Console.Write($"{x}\t");
+                Console.WriteLine();
+            }
+
             ReadKey();
         }
     }

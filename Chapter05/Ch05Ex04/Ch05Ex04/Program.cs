@@ -76,7 +76,20 @@ namespace Ch05Ex04
                 Console.WriteLine();
             }
 
+            int myNumber = 5;
+            ref int myNumberRef = ref myNumber;
+            myNumberRef = 6;
+            Console.WriteLine($"myNumber = {myNumber}");
+            string s = "Ivan";
+            Console.WriteLine(ShowDoubleS(ref s)+"ov");
+
+
             ReadKey();
+        }
+        static ref string ShowDoubleS(ref string s)
+        {
+            s += s; 
+            return ref s;
         }
     }
 }

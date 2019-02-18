@@ -82,6 +82,12 @@ namespace Ch05Ex04
             Console.WriteLine($"myNumber = {myNumber}");
             string s = "Ivan";
             Console.WriteLine(ShowDoubleS(ref s)+"ov");
+            DayOfMonth(out int g);
+            Console.WriteLine(g);
+
+            var averages = GetMaxMin(new int[] { 1,6,4,2,3});
+            Console.WriteLine($"max = {averages.max}, min = {averages.min}, average = {averages.average}");
+
 
 
             ReadKey();
@@ -90,6 +96,16 @@ namespace Ch05Ex04
         {
             s += s; 
             return ref s;
+        }
+        static void DayOfMonth(out int x)
+        {
+            x = System.DateTime.Now.Day;
+        }
+        static (int max, int min, double average) GetMaxMin(IEnumerable<int> numbers)
+        {
+            return (Enumerable.Max(numbers),
+            Enumerable.Min(numbers),
+            Enumerable.Average(numbers));
         }
     }
 }

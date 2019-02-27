@@ -10,29 +10,20 @@ namespace Ch03Ex01
     {
         static void Main(string[] args)
         {
-            int myInteger;
-            string myString;
-            myInteger = 17;
-            myString = "\"myInteger\" is";
-            Console.WriteLine($"{myString} {myInteger}");
-
-            myString = "This string has a\nline break.";
-            Console.WriteLine($"{myString} {myInteger}");
-
-            int[] binaryPhases = { 0b00110001, 0b01100010, 0b11000100, 0b1000100 };
-            int[] hexPhases = { 0x31, 0x62, 0xC4, 0x89 };
-                    
-            int[] numbers = { 0b0010_0000, 0b0100_0000, 0b1000_0000 };
-
-            myString = @"It's a verbatim string
-placed in two lines";
-            Console.WriteLine(myString);
-
-
-            int var1, var2 = 5, var3 = 6;
-            var1 = var2++ * --var3;
-            Console.WriteLine(var1);
-
+            double firstNumber, secondNumber;
+            string userName;
+            Console.WriteLine("Enter your name:");
+            userName = Console.ReadLine();
+            Console.WriteLine($"Welcome {userName}!");
+            Console.WriteLine("Now give me a number:");
+            firstNumber = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Now give me another number:");
+            secondNumber = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($"The sum of {firstNumber} and {secondNumber} is {firstNumber + secondNumber}.");
+            Console.WriteLine($"The result of subtracting {secondNumber} from {firstNumber} is {firstNumber - secondNumber}.");
+            Console.WriteLine($"The product of {firstNumber} and {secondNumber} is {firstNumber * secondNumber}.");
+            Console.WriteLine($"The result of dividing {firstNumber} by {secondNumber} is {firstNumber / secondNumber}.");
+            Console.WriteLine($"The remainder after dividing {firstNumber} by {secondNumber} is {firstNumber % secondNumber}.");
             Console.ReadKey();
         }
     }

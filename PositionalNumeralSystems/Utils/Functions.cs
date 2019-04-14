@@ -18,19 +18,20 @@ namespace Utils
         public static string FromDec(int n, int r)  // От десетична в r-ична
         {
             string sign = n >= 0 ? "" : "-";
-            string s = "";
+            StringBuilder s = new StringBuilder();
             int d;
             n = Math.Abs(n);
             while (n != 0)
             {
                 d = n % r;
                 if (d > 9)
-                    s = (char)(d + 'A' - 10) + s;
+                    s.Insert(0, (char)(d + 'A' - 10)); // добавя в началото
                 else
-                    s = (char)(d + '0') + s;
-                n = n / r;
+                    s.Insert(0, (char)(d + '0'));
+                n /= r;
             }
-            return sign + s;
+            s.Insert(0, sign);
+            return s.ToString();
         }
         public static int ToDec(string s, int r)    // От r-ична в десетична
         {

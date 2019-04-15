@@ -27,7 +27,7 @@ namespace Utils
             }
             return ret;
         }
-    public static string FromDec(int n, int r)  // От десетична в r-ична
+        public static string FromDec(int n, int r)  // От десетична в r-ична
         {
             string sign = n >= 0 ? "" : "-";
             StringBuilder s = new StringBuilder();
@@ -59,9 +59,9 @@ namespace Utils
             for (int i = 0; i < l; i++)
             {
                 if (s[i] >= 'A')
-                    n = n + (s[i] - 'A' + 10) * Pow(r, l - i - 1);
+                    n = n + (s[i] - 'A' + 10) * fastPow(r, l - i - 1);
                 else
-                    n = n + (s[i] - '0') * Pow(r, l - i - 1);
+                    n = n + (s[i] - '0') * fastPow(r, l - i - 1);
             }
             return sign * n;
         }

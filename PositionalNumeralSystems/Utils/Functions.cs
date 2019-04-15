@@ -15,7 +15,19 @@ namespace Utils
                 res *= a;
             return res;
         }
-        public static string FromDec(int n, int r)  // От десетична в r-ична
+        public static int fastPow(int num, int power)
+        {
+            int ret = 1;
+            for (; power > 0; power >>= 1)
+            {
+                int res = power & 1;
+                if(res!=0)
+                    ret = ret* num;
+                num = num* num;
+            }
+            return ret;
+        }
+    public static string FromDec(int n, int r)  // От десетична в r-ична
         {
             string sign = n >= 0 ? "" : "-";
             StringBuilder s = new StringBuilder();

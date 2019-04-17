@@ -20,8 +20,7 @@ namespace Utils
             int ret = 1;
             for (; power > 0; power >>= 1)
             {
-                int res = power & 1;
-                if(res!=0)
+                if(Convert.ToBoolean(power & 1))
                     ret = ret* num;
                 num = num* num;
             }

@@ -38,7 +38,7 @@ namespace PositionalNumeralSystems
             }
             catch(FormatException)
             {
-                MessageBox.Show("Некоректен формат на данните");
+                MessageBox.Show("Некоректен формат на данните","Грешка",MessageBoxButton.OK,MessageBoxImage.Error);
                 HexBox.Text = "0";
                 BinBox.Text = "0";
                 DecBox.Text = "0";
